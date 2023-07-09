@@ -1,0 +1,149 @@
+Problem,Part,Function Name,N represents,Time - O(),,,Space - O(),,,Notes,Cyclomatic Complexity,Token Count,Parameter Count,Nloc,Runtime I (user percentile),Runtime II,Runtime III,Memory I (user percentile),Memory II,Memory III,Average Runtime,Stdev Runtime,Average Memory,Stdev Memory,Time - Number matched,,,Space - Number matched,,
+,,,,Best,Average,Worst,Best,Average,Worst,,,,,,,,,,,,,,,,Best,Average,Worst,Best,Average,Worst
+2,I,minDepth,Number of nodes,N,N,N,log(N),log(N),N,Visits every node once,6,94,2,12,42.73,77.58,52.21,33.37,33.37,43.35,57.51,18.02,36.70,5.76,4,4,4,2,2,4
+2,II,,,N,N,N,1,sqrt(N),N,"Space used by duque is max width of binary tree, which is known to be of the order sqrt(N)",7,97,2,12,89.53,78.8,93.23,95.32,89.4,89.4,87.19,7.49,91.37,3.42,4,4,4,1,3,4
+2,III,,,N,N,N,1,sqrt(N),N,Same as II,7,97,2,12,77.9,94.95,97.78,89.4,89.4,95.32,90.21,10.75,91.37,3.42,4,4,4,1,3,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4,I,middleNode,Number of nodes,N,N,N,1,1,1,,3,34,2,6,75.44,84.48,84.48,97.18,78.43,51.4,81.47,5.22,75.67,23.01,4,4,4,1,1,1
+4,II,,,N,N,N,1,1,1,,3,47,2,11,32.66,24.74,94.45,54.31,78.43,78.43,50.62,38.17,70.39,13.93,4,4,4,1,1,1
+4,III,,,N,N,N,1,1,1,Same as I,3,34,2,6,30.44,94.45,61.61,80.48,96.42,25.9,62.17,32.01,67.60,36.98,4,4,4,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,I,longestPalindrome,String length,N,N,N,1,1,1,Dominating factor is iteration through string. `char_count` has max 52 keys so it is counted as constant space.,4,70,,13,74.41,73.31,99.12,65.68,34.8,62.53,82.28,14.59,54.34,16.99,4,4,4,1,1,1
+6,II,,,N,N,N,1,1,1,,5,93,2,17,89.5,6.3,15.11,90.9,62.53,62.53,36.97,45.71,71.99,16.38,4,4,4,1,1,1
+6,III,,,N,N,N,1,1,1,,5,97,2,17,74.41,41.73,41.73,65.68,88.14,34.8,52.62,18.87,62.87,26.78,4,4,4,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+7,I,largestPerimeter,Length of nums list,N,N*log(N),N*log(N),N,N,N,`.sort()` uses TimSort which is O(N) in the best case and O(N*log(N)) in the average and worst case. Its space complexity is O(N).,3,67,2,7,42.23,21.58,29,70.53,90.2,70.53,30.94,10.46,77.09,11.36,4,5,5,4,4,4
+7,II,,,N,N*log(N),N*log(N),N,N,N,Same as I (only different syntax),3,57,2,7,42.23,34.57,21.81,90.2,70.53,23.67,32.87,10.32,61.47,34.18,4,5,5,4,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+8,I,ping,len(requests),N,N,N,1,1,N,"`append()` -> O(N), ‘pop()` -> O(N). While loop runs at most 3000 times since each value of t is unique, so it is considered a constant factor,",3,46,2,5,49.9,23.64,21.21,87.27,36.97,96.97,31.58,15.91,73.74,32.21,4,4,4,1,1,4
+8,II,,,1,1,N,1,1,N,"popleft() -> O(1). Append takes O(1) amortised but O(N) in the worst case, affecting both time and space.",2,41,2,5,66.67,96.36,69.7,20,36.97,7.27,77.58,16.34,21.41,14.90,1,1,4,1,1,4
+8,III,,,1,1,1,1,1,1,"Constant list introduced, no resizing",2,71,2,8,38.79,18.79,21.21,7.27,20,64.85,26.26,10.92,30.71,30.25,1,1,1,1,1,1
+8,IV,,,1,1,N,1,1,N,Similar reasoning as II,2,41,2,5,83.64,66.67,60,7.27,36.97,20,70.10,12.19,21.41,14.90,1,1,4,1,1,4
+8,V,,,1,1,N,1,1,N,Similar reasoning as II,2,45,2,5,60,60,17.58,36.97,20,36.97,45.86,24.49,31.31,9.80,1,1,4,1,1,4
+8,VI,,,1,1,N,1,1,N,Same as V with variables renamed,2,45,2,5,20,56.36,67.27,20,7.27,20,47.88,24.75,15.76,7.35,1,1,4,1,1,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+9,I,findTheDifference,"max(len(s), len(t))",N,N,N,1,1,1,"Assuming Python uses a good hashing algorithm, all dict operations are O(1). Resizing considered constant as only upto 26 keys max for lowercase English alphabets.",6,81,3,10,88.23,74.6,52.88,71.1,42.8,93.37,71.90,17.83,69.09,25.34,4,4,4,1,1,1
+9,II,,,N,N,N,N,N,N,String concatenation takes upto 2*N but still order of O(N),2,31,3,5,88.23,87.75,83.86,71.1,93.37,93.37,86.61,2.40,85.95,12.86,4,4,4,4,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+10,I,firstUniqChar,Length of s,N,N,N,1,1,1,"Loop of length N is dominating factor, constant space of max 26 keys in dict.",4,59,2,8,56.41,54.65,65.45,32.4,32.4,44.24,58.84,5.79,36.35,6.84,4,4,4,1,1,1
+10,II,,,N,N,N,1,1,1,,4,59,2,8,27.32,27.59,28.4,86.53,64.48,86.53,27.77,0.56,79.18,12.73,4,4,4,1,1,1
+10,III,,,N,N,N,1,1,1,,4,69,2,8,55.76,58.1,53.16,18.2,44.24,44.24,55.67,2.47,35.56,15.03,4,4,4,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11,I,preorderTraversal,Number of nodes,N,N,N,log(N),log(N),N,Need to visit all nodes once. Worst case space complexity of recursion stack when tree completely skewed (i.e. a linked list).,2,46,3,6,78.91,15.99,81.93,75,18.53,71.48,58.94,37.23,55.00,31.64,4,4,4,2,2,4
+11,II,,,N,N^2,N^2,1,N,N,"Space used for result array not counted as it is the return value. Best case when completely skewed, since pop() called on a list with a single element takes O(1) time, and append() is also O(1) amortised. pop() on a list of length of order N takes O(N) time, leading to O(N^2) time complexity when called in a loop of order N.",5,70,2,13,95.36,27.34,99.82,75,99.82,45.59,74.17,40.62,73.47,27.15,4,6,6,1,4,4
+11,III,,,N,N,N,1,1,1,"Visits each node once, constant extra space.",6,98,2,19,78.91,15.99,46.14,75,94.55,94.55,47.01,31.47,88.03,11.29,4,4,4,1,1,1
+11,IV,,,N,N^2,N^2,1,N,N,Same as II,5,70,2,13,65.82,95.64,46.14,95.27,45.59,94.55,69.20,24.92,78.47,28.48,4,6,6,1,4,4
+11,V,,,N,N,N,log(N),log(N),N,"Same as I with deque, making pop() constant time.",5,73,2,13,27.27,32.33,32.33,49.9,5.18,45.59,30.64,2.92,33.56,24.67,4,4,4,,,
+11,VI,,,N,N,N,1,1,1,Same as III,7,105,2,21,34.7,97.82,34.7,45.59,71.48,94.55,55.74,36.44,70.54,24.49,4,4,4,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+12,I,search,Length of nums list,1,log(N),log(N),1,1,1,Binary search,4,70,3,11,46.23,11.47,20.8,26.8,79.7,79.7,26.17,17.99,62.07,30.54,1,2,2,1,1,1
+12,II,,,1,log(N),log(N),1,1,1,`bisect` implements binary search,3,42,3,6,20.8,5.7,14.23,52.53,26.8,26.8,13.58,7.57,35.38,14.86,1,2,2,1,1,1
+12,III,,,1,log(N),log(N),1,log(N),log(N),Up to log(N) recursion calls of `Solution.binary_search`,1,28,3,2,17.24,22.87,15.68,96.69,52.53,52.53,18.60,3.78,67.25,25.50,1,2,2,1,2,2
+12,IV,,,1,log(N),log(N),1,1,1,Same as I,4,70,3,11,24.42,14.23,18.74,52.53,96.69,79.7,19.13,5.11,76.31,22.27,1,2,2,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+13,I,dietPlanPerformance,Length of calories list,N,N,N,1,1,1,"Slice `calories[:k]` is O(k) (it copies that part of the list, so both time and space) and k <= N.",6,86,5,14,73.68,21.5,21.5,52.63,94.74,84.21,38.89,30.13,77.19,21.91,4,4,4,1,1,1
+13,II,,,N,N,N,1,N,N,Same as I,6,86,5,14,31.58,73.68,21.5,84.21,94.74,94.74,42.25,27.68,91.23,6.08,4,4,4,1,4,4
+13,III,,,N,N,N,1,N,N,Same as I,6,86,5,14,57.89,31.58,73.68,84.21,31.58,84.21,54.38,21.27,66.67,30.39,4,4,4,1,4,4
+13,IV,,,N,N,N,1,1,1,"For loop is O(N) time, constant additional space.",5,67,5,12,21.5,15.79,5.26,52.63,94.74,84.21,14.18,8.24,77.19,21.91,4,4,4,1,1,1
+13,V,,,N,N,N,1,N,N,Same as I,6,86,5,14,15.79,68.4,89.47,31.58,84.21,94.74,57.89,37.95,70.18,33.84,4,4,4,1,4,4
+13,VI,,,N,N,N,1,N,N,Same as I,6,86,5,14,47.37,47.37,15.79,52.63,94.74,84.21,36.84,18.23,77.19,21.91,4,4,4,1,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+15,I,read,Number of bytes to read (n),N,N,N,1,1,1,"While loop proportional to N (N/4, since 4 bytes read at a time). Constant extra space used by variables since `buf` is provided as input and hence doesn’t count towards the space complexity.",4,66,3,11,23.8,81.82,54.55,88.46,81.82,57.58,53.39,29.03,75.95,16.25,4,4,4,1,1,1
+15,II,,,N,N,N,1,1,1,Same logic as I,5,74,3,12,80.77,81.82,21.21,30.77,57.58,100,61.27,34.69,62.78,34.91,4,4,4,1,1,1
+15,III,,,N,N,N,1,1,1,Same logic as I,8,91,3,17,92.31,90.91,81.82,30.77,57.58,27.27,88.35,5.70,38.54,16.58,4,4,4,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,I,addBinary,"max(len(i), len(j))",N,N,N,N,N,N,"While loop is the dominating factor for time complexity, `result` list takes O(N) space.",6,115,3,14,11.54,54.83,45.55,75.7,94.56,75.7,37.31,22.79,81.99,10.89,4,4,4,4,4,4
+17,II,,,N,N,N,N,N,N,Same dominating factors. Slicing instead of reversal of result list adds space but on the same order.,6,115,3,13,67.5,38.51,67.5,48.6,75.7,75.7,57.84,16.74,66.67,15.65,4,4,4,4,4,4
+17,III,,,N,N,N,N,N,N,Same as II,6,115,3,13,34.96,14.19,9.22,48.6,23.18,94.56,19.46,13.65,55.45,36.18,4,4,4,4,4,4
+17,IV,,,N,N,N,N,N,N,"Same logic as II, syntax differences",6,109,3,15,34.96,38.51,27.81,7.24,48.6,94.56,33.76,5.45,50.13,43.68,4,4,4,4,4,4
+17,V,,,N^2,N^2,N^2,N^2,N^2,N^2,"`result = str(digit_sum % 2) + result` operation means that `result` is copied in every iteration. Copying takes O(N) time and is done N times in the loop, leading to O(N^2) time complexity. We also cannot tell when the space is freed after the variable is overwritten, so all assignments of `result` could potentially be occupied at the time the function returns, contributing to space complexity.",6,97,3,15,7.85,52.65,32.54,75.7,75.7,94.56,31.01,22.44,81.99,10.89,6,6,6,6,6,6
+17,VI,,,N^2,N^2,N^2,N^2,N^2,N^2,Same as V,6,97,3,15,32.54,17.5,27.81,75.7,94.56,48.6,25.95,7.69,72.95,23.10,6,6,6,6,6,6
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+18,I,findLucky,Length of arr list,N,N,N,1,1,1,For loop is dominating factor for time. At most 500 distinct keys in frequency dict so constant space.,5,69,2,11,76.71,41.42,43.79,97.95,20.71,37.28,53.97,19.73,51.98,40.66,4,4,4,1,1,1
+18,II,,,N,N,N,1,1,1,"Same logic as I, syntax differences",3,43,2,7,26.71,72.78,54.44,97.95,62.72,62.72,51.31,23.19,74.46,20.34,4,4,4,1,1,1
+18,III,,,N,N,N,1,1,1,"Same logic as I, syntax differences",4,55,2,9,56.85,79.88,68.5,74.66,99.41,91.72,68.41,11.52,88.60,12.67,4,4,4,1,1,1
+18,IV,,,N,N^2,N^2,1,1,1,"set() is O(N) time, count() is O(N) time and is called upto N times in the for loop. Best case assumes all numbers in arr are the same (i.e. set length is 1).",3,42,2,7,36.3,100,83.43,74.66,91.72,91.72,73.24,33.05,86.03,9.85,4,6,6,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+20,I,smallestEvenMultiple,n ,1,1,1,1,1,1,,2,22,2,5,58.29,95.95,69.61,28.68,55.43,55.43,74.62,19.32,46.51,15.44,1,1,1,1,1,1
+20,II,,,1,1,1,1,1,1,"Same as I, syntax difference",2,20,2,4,18.44,69.61,69.61,58.29,97.24,55.43,52.55,29.54,70.32,23.36,1,1,1,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+21,I,exist,Word length,N,4^N,4^N,N,N,N,"Best case is if word is found immediately. Otherwise 4 recursions per call, up to N times. Max N backtrack recursion calls at a time, contributing to space complexity. Board dimensions considered constant at max value.",4,55,3,7,57.75,60.72,60.72,93.43,75.24,75.24,59.73,1.71,81.30,10.50,4,6,6,4,4,4
+21,II,,,N,4^N,4^N,N,N,N,Same logic as I,4,55,3,7,58.72,60.61,60.61,77.91,92.57,75.24,59.98,1.09,81.91,9.33,4,7,7,4,4,4
+21,III,,,N,4^N,4^N,N,N,N,Same logic as I,4,55,3,7,60.66,62.77,56.63,77.91,92.57,92.57,60.02,3.12,87.68,8.46,4,7,7,4,4,4
+21,IV,,,N,4^N,4^N,N,N,N,Same dominating factors,4,71,3,11,87.39,87.84,87.84,93.43,75.24,51.35,87.69,0.26,73.34,21.10,4,7,7,4,4,4
+21,V,,,N,4^N,4^N,N,N,N,Extra space for memo grid but same dominating factors,5,82,3,8,40.29,36.8,41.3,55.6,92.57,92.57,39.46,2.36,80.25,21.34,4,7,7,4,4,4
+21,VI,,,N,4^N,4^N,N,N,N,Same as I,4,55,3,7,61.41,63.31,61.8,99.14,24.87,92.57,62.17,1.00,72.19,41.11,4,7,7,4,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22,I,maxWidthRamp,Length of nums list,N,N^2,N^2,1,N,N,"Best case: stack is empty. Otherwise, stack could be upto N elements long and can call pop() in every iteration of the second for loop (i.e. N times).",7,101,2,11,58.82,47.6,47.6,23.53,70.59,35.29,51.34,6.48,43.14,24.49,4,6,6,1,4,4
+22,II,,,N,N*log(N),N*log(N),N,N,N,Sorting (using TimSort) takes O(N) time in the best case and O(N*log(N)) time in the average and worst case. Sorting also creates a copy of the list.,2,66,2,10,35.29,35.29,23.53,23.53,23.53,23.53,31.37,6.79,23.53,0.00,4,5,5,4,4,4
+22,III,,,N,N^2,N^2,1,N,N,Same logic as I,7,101,2,11,58.82,47.6,47.6,70.59,35.29,47.6,51.34,6.48,51.16,17.92,4,6,6,1,4,4
+22,IV,,,N,N*log(N),N*log(N),N,N,N,"Similar logic to II, same dominating factors.",3,70,2,10,17.65,17.65,17.65,5.88,5.88,5.88,17.65,0.00,5.88,0.00,4,5,5,4,4,4
+22,V,,,N,N*log(N),N*log(N),N,N,N,"Similar logic to II, same dominating factors.",2,67,2,10,23.53,17.65,23.53,23.53,23.53,23.53,21.57,3.39,23.53,0.00,4,5,5,4,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+26,I,generateTrees,n ,4^N,4^N,4^N,N,N,N,Time: see Catalan numbers. Space: max recursion depth (not counting the output).,2,25,2,5,51.35,69.48,11.69,79.5,76.62,52.6,44.17,29.56,69.57,14.77,7,7,7,4,4,4
+26,II,,,4^N,4^N,4^N,N,N,N,"Similar to I, memoization may improve performance but same order of complexity.",2,31,2,6,25,83.77,57.79,95.27,90.26,96.75,55.52,29.45,94.09,3.40,7,7,7,4,4,4
+26,III,,,4^N,4^N,4^N,N*4^N,N*4^N,N*4^N,Additional space due to `clone_tree`,7,134,2,16,6.76,69.48,10.39,5.41,5.84,5.84,28.88,35.21,5.70,0.25,7,7,7,9,9,9
+26,IV,,,4^N,4^N,4^N,N,N,N,Same as II,2,31,2,6,97.97,92.86,57.79,97.3,96.75,93.51,82.87,21.87,95.85,2.05,7,7,7,4,4,4
+26,V,,,4^N,4^N,4^N,N,N,N,Same as I,2,25,2,5,59.46,79.87,50,79.5,84.42,66.88,63.11,15.27,76.93,9.05,7,7,7,4,4,4
+26,VI,,,4^N,4^N,4^N,N,N,N,Same as II,2,31,2,6,92.57,45.45,62.99,92.57,93.51,96.75,67.00,23.81,94.28,2.19,7,7,7,4,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+28,I,numTeams,Length of rating list,N^2,N^2,N^2,1,1,1,Nested loops of effectively length N,8,125,2,17,46.67,40,43.33,33.33,73.33,73.33,43.33,3.34,60.00,23.09,6,6,6,1,1,1
+28,II,,,N^2,N^2,N^2,1,1,1,Same as I,8,125,2,17,46.67,50,46.67,100,100,100,47.78,1.92,100.00,0.00,6,6,6,1,1,1
+28,III,,,N^2,N^2,N^2,1,1,1,Same as I,8,125,2,17,43.33,46.67,43.33,86.67,73.33,73.33,44.44,1.93,77.78,7.70,6,6,6,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+29,I,new21Game,n,1,N,N,1,N,N,"Best case returns immediately. Otherwise, for loop is O(N) time and dp array is O(N) space.",6,107,4,13,100,75,25,16.67,75,75,66.67,38.19,55.56,33.68,1,4,4,1,4,4
+29,II,,,1,N,N,1,N,N,Same as I,6,107,4,13,50,12.5,12.5,50,37.5,75,25.00,21.65,54.17,19.09,1,4,4,1,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+30,I,findBuildings,Length of heights list,N,N,N,1,N,N,"append() is O(1) amortised, and is called in a loop so we take the amortised complexity in all 3 cases. (If it was only once, we’d take O(N) in the worst case). Space is constant in the best case if heights in decreasing order (ocean_view_buildings is empty), otherwise on the order of O(N).",3,60,2,8,39.8,56.7,57.73,56.12,27.84,50.52,51.41,10.07,44.83,14.97,4,4,4,1,4,4
+30,II,,,N,N,N,1,N,N,"Same as I, only renamed variables",3,60,2,8,42.86,39.18,59.79,70.41,50.52,67.1,47.28,10.99,62.68,10.66,4,4,4,1,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+32,I,countBattleships,Number of cells on the board,N,N,N,1,1,1,Checks each cell once.,8,87,2,11,97.62,81.48,56.79,47.62,70.37,90.12,78.63,20.56,69.37,21.27,4,4,4,1,1,1
+32,II,,,N,N,N,1,1,1,"Same logic as I, syntax difference",8,87,2,7,35.71,75.31,96.3,71.43,86.42,49.38,69.11,30.77,69.08,18.63,4,4,4,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+34,I,minimumDeletions,Length of s,N,N,N,1,1,1,,3,41,2,9,66.67,66.67,66.67,80,93.33,80,66.67,0.00,84.44,7.70,4,4,4,1,1,1
+34,II,,,N,N,N,1,1,1,Same as I,3,41,2,9,66.67,60,66.67,93.33,93.33,100,64.45,3.85,95.55,3.85,4,4,4,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+36,I,isPossibleDivide,Length of nums list,N,N^2,N^2,1,N,N,"len() -> O(N), sorted() -> O(N) in best case, O(N*log(N)) in average and worst. k is on the order of N, so nested loop gives O(N^2) time complexity. Space complexity constant if immediate return otherwise sorted_nums takes O(N) space.",7,108,3,15,84,86.96,82.61,80,78.26,86.96,84.52,2.22,81.74,4.60,4,6,6,1,4,4
+36,II,,,N,N^2,N^2,1,N,N,"Similar, with min_heap taking O(N) space in the average and worst case. Best case space when nums has the same repeating number.",7,100,3,17,28,30.44,30.44,64,26.9,78.26,29.63,1.41,56.39,26.51,4,6,6,1,4,4
+36,III,,,N,N^2,N^2,1,N,N,"Similar, with num_count taking O(N) space in the average and worst case.",6,89,3,14,68,60.87,73.91,28,65.22,78.26,67.59,6.53,57.16,26.08,4,6,6,1,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+37,I,highestPeak,Total number of cells,N,N^2,N^2,N,N,N,"pop(0) -> O(N), and is called inside a loop that runs N times. Best case when queue is empty. O(N) space taken by height matrix.",10,201,2,17,6.67,11.76,11.76,86.67,88.24,88.24,10.06,2.94,87.72,0.91,4,6,6,4,4,4
+37,II,,,N,N,N,N,N,N,popleft() -> O(1),10,207,2,17,80,94.12,88.24,80,88.24,82.35,87.45,7.09,83.53,4.24,4,4,4,4,4,4
+37,III,,,N,N*log(N),N*log(N),N,N,N,Heap operations are O(log(N)),10,207,2,17,66.67,70.59,70.59,73.33,76.47,76.47,69.28,2.26,75.42,1.81,4,5,5,4,4,4
+37,IV,,,N,N^2,N^2,N,N,N,Same as I,10,201,2,17,6.67,29.41,17.65,86.67,88.24,88.24,17.91,11.37,87.72,0.91,4,6,6,4,4,4
+37,V,,,N,N,N,N,N,N,Same as II,10,201,2,17,86.67,88.24,82.35,73.33,82.35,82.35,85.75,3.05,79.34,5.21,4,4,4,4,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+39,I,largestDivisibleSubset,Length of nums list,N^2,N^2,N^2,N,N,N,"Nested loops dominate time complexity, dp and prev lists take O(N) space.",8,159,2,22,43.4,66.67,60.78,84.91,92.16,84.31,56.95,12.10,87.13,4.37,6,6,6,4,4,4
+39,II,,,N^2,N^2,N^2,N,N,N,Same dominating factors,9,180,2,20,47.17,43.14,47.6,56.6,92.16,56.86,45.97,2.46,68.54,20.46,6,6,6,4,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+40,I,maxProbability,Number of nodes,N*log(N),N^2,N^2,N,N,N,"Best case: sparse edges so time complexity is N*log(N) for heap operations in `while pq` loop. Average/worst case: number of edges are of order N^2, enumerate edge loop dominates time complexity. O(N) space taken by graph and distances list.",7,197,6,21,51.67,42.86,46.3,81.67,85.71,82.54,46.94,4.44,83.31,2.13,5,6,6,4,4,4
+40,II,,,N*log(N),N^2,N^2,N,N,N,"Same as I, syntax difference",7,190,6,20,51.67,44.44,85.71,85,85.71,82.54,60.61,22.04,84.42,1.66,5,6,6,4,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+42,I,calculateMinimumHP,Total number of cells,N,N,N,N,N,N,Space: dp array. Time: nested loops,8,233,2,15,91.67,57.83,91.57,85.71,61.45,38.55,80.36,19.51,61.90,23.58,4,4,4,4,4,4
+42,II,,,sqrt(N),sqrt(N),N,N,N,N,"Separate loops for height and width of dungeon. Best and average case time when m~=n, worst when m << n or m >> n.",4,194,2,12,79.76,93.98,69.88,61.9,98.8,85.54,81.21,12.11,82.08,18.69,3,3,4,4,4,4
+42,III,,,N,N,N,1,1,1,No dp array.,4,224,2,11,61.9,79.52,100,38.1,61.45,38.55,80.47,19.07,46.03,13.35,4,4,4,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+43,I,tallestBillboard,Length of rods list,N^2,N^2,N^2,N^2,N^2,N^2,"O(N) time to copy dp and iterate through it in each outer loop iteration, O(N) space to copy dp every time resulting in O(N^2) overall time and space complexity.",3,99,2,10,60,60,40,40,40,40,53.33,11.55,40.00,0.00,6,6,6,6,6,6
+43,II,,,N,N,N,N,N,N,"max_sum <= 5000, so constant time assumed to iterate in nested loop. Outer loop / sum operation takes O(N) time. Dp array takes O(N) space.",5,233,2,13,20,20,20,20,20,20,20.00,0.00,20.00,0.00,4,4,4,4,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+45,I,maxProfit,Length of prices list,N,N,N,1,1,1,"Single outer loop (inner loop iterates a constant number of time), constant extra space.",4,91,2,10,32.13,31.9,30.5,82.38,96.37,88.6,31.51,0.88,89.12,7.01,4,4,4,1,1,1
+45,II,,,N,N,N,1,1,1,Same dominating factors,3,72,2,11,62.18,70.47,68.91,82.38,82.38,96.37,67.19,4.41,87.04,8.08,4,4,4,1,1,1
+45,III,,,N,N,N,1,1,1,Same as II,3,72,2,11,61.14,68.91,64.35,88.6,96.37,82.38,64.80,3.90,89.12,7.01,4,4,4,1,1,1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+46,I,countPaths,Total number of cells,N,N,N,N,N,N,Dfs function is O(1) time and is called once for each cell. Dp array is O(N) space.,4,84,2,10,93.75,93.75,93.75,87.5,87.5,87.5,93.75,0.00,87.50,0.00,4,4,4,4,4,4
+46,II,,,N,N,N,N,N,N,Same dominating factors.,4,85,2,10,87.5,93.75,93.75,87.5,87.5,87.5,91.67,3.61,87.50,0.00,4,4,4,4,4,4
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+53,I,minDays,Total number of cells,N,N^2,N^2,N,N^2,N^2,"Dis function is O(1) time and is called once for each cell in countIslands function, making it O(N) time (and O(N) space for visited array). Best case, countIslands is called only once. Average and worst case, it is called once in each iteration of nested loop, running O(N) times.",6,95,2,12,90,90,90,100,90,100,90.00,0.00,96.67,5.77,4,6,6,4,6,6
+53,II,,,N,N^2,N^2,N,N^2,N^2,Same dominating factors,6,98,2,12,90,90,90,60,60,90,90.00,0.00,70.00,17.32,4,6,6,4,6,6
+53,III,,,N,N^2,N^2,N,N^2,N^2,Same dominating factors,3,52,2,7,90,90,70,90,100,90,83.33,11.55,93.33,5.77,4,6,6,4,6,6
+53,IV,,,N,N^2,N^2,N,N^2,N^2,Same dominating factors,3,66,2,8,10,10,10,60,60,60,10.00,0.00,60.00,0.00,4,6,6,4,6,6
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+59,I,makeLargestSpecial,Length of s,N,N^2,N^2,N,N^2,N^2,"Best case: s=101010… since complexity made up by one iteration through for loop (n times) and constant time of make_special(“10”) n/2 times. Worst case: s=1111…0000… since complexity made up by one iteration through for loop (n times) which calls make_special(111…000…) (Len n-2, so n-2 more times) which calls make_special(11…00…) (Len n-4, so n-4 more times) until n-n i.e. empty string is reached, leading to a sum of n*(n/2) [~ O(N^2)] - (2 + 4 + …(up to n)) = 1/2 * sum([1…n]) [~ O(N^2)]. Space complexity follows as strings are rewritten in every substrings.append() call.",1,15,2,3,50,75,75,100,100,50,66.67,14.43,83.33,28.87,4,6,6,4,6,6
+59,II,,,N,N^2,N^2,N,N^2,N^2,"Same as I, syntax difference",1,15,2,3,75,75,75,50,25,100,75.00,0.00,58.33,38.19,4,6,6,4,6,6
+59,III,,,N,N^2,N^2,N,N^2,N^2,"Same as I, syntax difference",1,15,2,3,50,25,25,50,50,25,33.33,14.43,41.67,14.43,4,6,6,4,6,6
+59,IV,,,N,N^2,N^2,N,N^2,N^2,"Same as I, syntax difference",1,15,2,3,62.5,25,50,50,100,25,45.83,19.09,58.33,38.19,4,6,6,4,6,6
+59,V,,,N,N^2,N^2,N,N^2,N^2,"Same as I, syntax difference",1,15,2,3,62.5,62.5,75,100,100,100,66.67,7.22,100.00,0.00,4,6,6,4,6,6
+59,VI,,,N,N^2,N^2,N,N^2,N^2,"Same as I, syntax difference",1,15,2,3,62.5,25,75,100,100,100,54.17,26.02,100.00,0.00,4,6,6,4,6,6
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,13.88,,15.52,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,45.71,,43.68,,,,,,

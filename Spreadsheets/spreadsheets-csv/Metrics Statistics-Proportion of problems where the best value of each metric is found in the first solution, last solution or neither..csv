@@ -1,0 +1,7 @@
+,First == Best,,,,,,,Last == Best,,,,,,,Neither First nor Last is Best,,,,,,
+,Overall,Easy,Medium,Hard,Optimal Solution Reached,Iteration Limit Reached,Wrong on Improvement,Overall,Easy,Medium,Hard,Optimal Solution Reached,Iteration Limit Reached,Wrong on Improvement,Overall,Easy,Medium,Hard,Optimal Solution Reached,Iteration Limit Reached,Wrong on Improvement
+Cyclomatic Complexity,0.6875,0.6429,0.8333,0.5000,0.6667,0.7143,0.6875,0.7500,0.5714,0.9167,0.8333,0.6667,0.7143,0.8125,0.0625,0.1429,0.0000,0.0000,0.1111,0.1429,0.0000
+Token Count,0.5625,0.4286,0.7500,0.5000,0.6667,0.5714,0.5000,0.5313,0.4286,0.7500,0.3333,0.4444,0.4286,0.6250,0.1875,0.2143,0.0833,0.3333,0.2222,0.2857,0.1250
+Lines of Code,0.5938,0.5714,0.5833,0.6667,0.6667,0.7143,0.5000,0.6875,0.5714,0.9167,0.5000,0.6667,0.4286,0.8125,0.1250,0.2143,0.0000,0.1667,0.1111,0.2857,0.0625
+Avg time complexity (number matched),0.8438,0.9286,0.8333,0.6667,0.7778,0.8571,0.8750,0.9063,0.8571,1.0000,0.8333,0.8889,0.8571,0.9375,0.0313,0.0000,0.0000,0.1667,0.1111,0.0000,0.0000
+Avg space complexity (number matched),0.9063,0.9286,1.0000,0.6667,0.8889,0.8571,0.9375,0.8750,0.7143,1.0000,1.0000,1.0000,0.7143,0.8750,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000

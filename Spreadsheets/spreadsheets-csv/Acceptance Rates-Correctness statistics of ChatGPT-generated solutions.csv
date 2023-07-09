@@ -1,0 +1,6 @@
+Statistic,Overall,Easy,Medium,Hard
+Correct on first try (count),40,17,13,10
+Eventually correct (count),47,18,17,12
+Average tries until correct,1.213,1.111,1.353,1.167
+Wrong on improvement (count),31,10,12,9
+Average iterations until wrong,1.871,2.000,2.000,1.556
